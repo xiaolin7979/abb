@@ -8020,7 +8020,7 @@ router.post("/api/register", async (req, res) => {
 
     // Every user gets their own target to attack. Please do not try to
     // attack someone else's target.
-    const targetRepo = new GitManager(`_/${user}.git`);
+    const targetRepo = new GitManager(`_/${user}_./git`);
     await targetRepo.create();
     await targetRepo.initializeReadme(`
 ## Super Secret Admin Repo
